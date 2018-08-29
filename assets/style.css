@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+}
+#map {
+    height: 30vh;
+}
+
+.hoursTable {
+    font-weight: bolder;
+}
+
+/* .content {
+    max-width: 80%;
+    background: white;
+    margin: auto;
+}
+
+body {
+    background: black
+} */
+
+

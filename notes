@@ -1,0 +1,63 @@
+No pictures
+
+Bad color scheme
+
+Green doesn’t make me think pizza
+
+Fonts are different colors
+
+Change Font to something Italian
+
+Plain white covers most the menu
+
+Header is messed up and doesn’t display properly
+
+Header covers nav tabs
+
+Nav tabs on the top and again on the side (redundant)
+
+Extra nav tab that does nothing
+
+None of the pages are responsive
+
+Home Page:
+
+No text, just a picture
+
+Header doesn’t grab attention
+
+Location Page
+
+Map on location page is just an image and not interactive
+
+Font isn’t really readable
+
+Map isn’t clickable to zoom
+
+Menu
+
+Text is off center
+
+Menu not organized well
+
+Needs pictures!
+
+I plan to change everything that I don’t like about the page. If I have time after that, I will consider adding a contact page with a form so that you can easily contact them. I will also add a reviews page attached to a mongo database running off an express server. To review:
+
+ 
+
+Add contact page
+
+Page should accept the user’s phone, email, name, and comments
+
+Contact page should submit to an email (fake email for now)
+
+Reviews page
+
+This page will have an input area for reviews
+
+It will accept the name, number of stars, and comment
+
+A timestamp will also be added
+
+Add a google map using the API for location
