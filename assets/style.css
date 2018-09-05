@@ -9,14 +9,22 @@
     font-weight: bolder;
 }
 
-/* .content {
+.content {
     max-width: 80%;
-    background: white;
+    background: #f5f5f5;
     margin: auto;
 }
 
 body {
-    background: black
-} */
+    /* background: black; */
 
+}
+
+#menuContent {
+
+}
+
+#location {
+    overflow: hidden;
+}
 
