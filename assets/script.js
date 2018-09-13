@@ -17,6 +17,8 @@ function initMap() {
 // End google maps
 
 $(document).ready(function () {
+    // initialize modals
+    $('.modal').modal();
 
     console.log("script.js loaded");
 
