@@ -1,6 +1,50 @@
 * {
     text-align: center;
+    background: transparent;
+    color: #DDD8B8;
+    font-weight: bolder;
 }
+
+body {
+    background: #205E06;
+}
+
+a {
+    color: #B3CBB9 !important;
+}
+
+.nav, .nav-wrapper {
+    background: #8c1c14;
+}
+
+.brand-logo {
+    color: #205E06 !important;
+    display: none !important;
+}
+.content {
+    max-width: 80%;
+    background-image: url("./images/wood.jpg");
+    margin: auto;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.pagination li {
+    margin: 5px;
+}
+
+.menuItems {
+    background-color: #205E06 !important;
+}
+
+.pagination li a:active, .pagination li a:hover  {
+    background: #8c1c14 !important;
+}
+
 #map {
     height: 30vh;
 }
@@ -9,22 +53,17 @@
     font-weight: bolder;
 }
 
-.content {
-    max-width: 80%;
-    background: #f5f5f5;
-    margin: auto;
-}
-
-body {
-    /* background: black; */
-
-}
-
-#menuContent {
-
-}
-
 #location {
     overflow: hidden;
 }
 
+.page-footer {
+    background: none;
+}
+
+
+@media only screen and (max-width: 470px) {
+    #frontImage {
+        display: none;
+    }
+}
