@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 
     var pasta = (
-        `<div class="right"> 
+        `<div> 
         <p align="center"> 
         &nbsp;<font size="6">Pasta</font><font size="3"></font>
         <br><br>
