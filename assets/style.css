@@ -10,7 +10,7 @@ body {
     background: #205E06;
 }
 
-a {
+a, button {
     color: #B3CBB9 !important;
 }
 
@@ -18,10 +18,24 @@ a {
     background: #8c1c14;
 }
 
-.brand-logo {
-    color: #205E06 !important;
-    display: none !important;
+#menuIcon {
+    width: 10%;
 }
+
+#dropdownNav {
+    /* background-image: url('./images/wood.jpg'); */
+     /* #8c1c14 */
+     background: #205E06
+}
+
+#dropdownNav li {
+    border-bottom: solid #DDD8A8 thin;
+}
+
+.brand-logo {
+    max-height: 64px;
+}
+
 .content {
     max-width: 80%;
     background-image: url("./images/wood.jpg");
@@ -30,8 +44,9 @@ a {
 }
 
 .overlay {
-    background: #2f4f4f52;
+    background: #0c0c0c96;
     min-height: inherit;
+    padding-top: 5px
 }
 
 h1, h2, h3, h4 {
@@ -43,7 +58,7 @@ h1, h2, h3, h4 {
     margin: 5px;
 }
 
-.menuItems {
+.menuItems, .turnGreen {
     background-color: #205E06 !important;
 }
 
@@ -67,7 +82,19 @@ h1, h2, h3, h4 {
     background: none;
 }
 
+input {
+    color: #9e9e9e;
+}
 
+
+@media only screen and (max-width: 400px) {
+    .brand-logo {
+        display: none !important;
+    }
+    #menuIcon {
+        float: center;
+    }
+}
 @media only screen and (max-width: 470px) {
     #frontImage {
         display: none;
@@ -76,5 +103,13 @@ h1, h2, h3, h4 {
 @media only screen and (max-width: 600px) {
     .content {
         max-width: 90%;
+    }
+
+}
+@media only screen and (max-width: 740px) {
+    .brand-logo {
+        /* display: none; */
+        width: 80%;
+        
     }
 }

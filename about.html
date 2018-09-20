@@ -1,45 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="pizza, food, denver, lakewood"/>
+    <meta name="keywords" content="pizza, food, denver, lakewood" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Best pizza in Denver"/>
+    <meta name="description" content="Best pizza in Denver" />
     <title>Front Room Pizza</title>
-    
+
     <!-- Add jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- Add Materialize Icons     -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    
+
     <!-- Link to CSS -->
     <link href="assets/style.css" type="text/css" rel="stylesheet" />
 
 </head>
+
 <body>
 
     <!-- nav -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo center">Frontroom Pizza</a>
-            <ul id="nav-mobile" class="right">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<!-- End nav -->
+                <img class="brand-logo center" src="assets/images/logo1.png" alt="">
+                <a class='dropdown-trigger right tooltipped' data-tooltip="Main Menu" id="menuIcon" href='#' data-target='dropdownNav'><i class="material-icons">menu</i></a>
+                <ul id="dropdownNav" class="dropdown-content">
+                    <li><a></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <!-- <li><a class="modal-trigger" href="#modal1">Modal for video</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- End nav -->
 
 <!-- Main Content -->
 <div class="content">

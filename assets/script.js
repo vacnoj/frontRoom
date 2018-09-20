@@ -19,8 +19,32 @@ function initMap() {
 $(document).ready(function () {
     // initialize modals
     $('.modal').modal();
-
+    // initialize dropdowns
+    $('.dropdown-trigger').dropdown();
+    // initialize tooltips
+    $('.tooltipped').tooltip();
+    
     console.log("script.js loaded");
+
+    $('#returnHome').hide();
+    
+    $('#feedbackButton').click(function() {
+        event.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var comments = $('#comments').val();
+        
+        
+        
+        console.log(name, email, phone, comments);
+        
+        $('.header').html(`<h2 class="">Thank You!</h2>`)
+        $('#feedbackForm').slideUp(1000, function() {
+            $('#returnHome').fadeIn(3000);
+        });
+        
+    });
 
     // Switch through the Menu Pages
     $('.menuItems').click(function () {
