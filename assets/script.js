@@ -16,6 +16,22 @@ function initMap() {
 }
 // End google maps
 
+// Load Firebase
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAb9afFXGakwH6vynj2jY0gEV_75GkrSuk",
+    authDomain: "reviews-8f02b.firebaseapp.com",
+    databaseURL: "https://reviews-8f02b.firebaseio.com",
+    projectId: "reviews-8f02b",
+    storageBucket: "reviews-8f02b.appspot.com",
+    messagingSenderId: "949087908892"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+
+// End Load Firebase
+
 $(document).ready(function () {
     // initialize modals
     $('.modal').modal();
@@ -27,6 +43,7 @@ $(document).ready(function () {
     console.log("script.js loaded");
 
     $('#returnHome').hide();
+    $('#seeReviews').hide();
     
     $('#feedbackButton').click(function() {
         event.preventDefault();
@@ -35,6 +52,17 @@ $(document).ready(function () {
         var phone = $('#phone').val();
         var comments = $('#comments').val();
         
+        database.ref().push({
+            name: name,
+            email: email,
+            phone: phone,
+            comments: comments
+        });	
+        
+        name = 
+        email = 
+        phone =
+        comments = 
         
         
         console.log(name, email, phone, comments);
@@ -42,8 +70,32 @@ $(document).ready(function () {
         $('.header').html(`<h2 class="">Thank You!</h2>`)
         $('#feedbackForm').slideUp(1000, function() {
             $('#returnHome').fadeIn(3000);
+            $('#seeReviews').fadeIn(3000);
+
         });
         
+    });
+
+    $("#table-body").prepend(`<div class="row table-header"></div>`);
+    $(".table-header").append(`<div class="th col s3">Name</div>`);
+    $(".table-header").append(`<div class="th col s3">Phone</div>`);
+    $(".table-header").append(`<div class="th col s3">Email</div>`);
+    $(".table-header").append(`<div class="th col s3">Comments</div>`);
+    
+    database.ref().on("child_added", function(childSnapshot) {
+	
+
+        $("#table-body").append(`<hr><div class="row tableRow">
+            <div class="col s3 table-name">${childSnapshot.val().name}</div>
+            <div class="col s3 table-phone">${childSnapshot.val().phone}</div>
+            <div class="col s3 table-email">${childSnapshot.val().email}</div>
+            <div class="col s3 table-comments">${childSnapshot.val().comments}</div>
+        </div><hr>`);
+        // $(".tableRow").append(`<div class="col s3 table-name">${childSnapshot.val().name}</div>`);
+        // $(".tableRow").append(`<div class="col s3 table-phone">${childSnapshot.val().phone}</div>`);
+        // $(".tableRow").append(`<div class="col s3 table-email">${childSnapshot.val().email}</div>`);
+        // $(".tableRow").append(`<div class="col s3 table-comments">${childSnapshot.val().comments}</div>`);
+    
     });
 
     // Switch through the Menu Pages
